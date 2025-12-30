@@ -1,0 +1,177 @@
+/* 1. RESET GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --text-color: #333;
+    --bg-white: #ffffff;
+    --sidebar-width: 240px; /* Largura fixa para a barra */
+}
+
+body {
+    background-color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* 2. A FOLHA A4 */
+.resume-container {
+    width: 210mm;
+    /* Removemos a altura mínima fixa para evitar páginas em branco */
+    background: var(--bg-white);
+    display: flex;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* 3. BARRA LATERAL (Esquerda) */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 25px 20px; /* Reduzi o padding */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ESTILO DA FOTO DE PERFIL */
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Deixa redonda */
+    object-fit: cover; /* Garante que a foto não distorça */
+    border: 3px solid white;
+    margin: 0 auto 15px auto; /* Centraliza e dá espaço abaixo */
+    display: block;
+}
+
+.sidebar h1 {
+    font-size: 1.2rem; /* Fonte um pouco menor */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.sidebar .title {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.sidebar h3 {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.sidebar p, .sidebar li {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    word-break: break-word; 
+    line-height: 1.4;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+/* 4. CONTEÚDO PRINCIPAL (Direita) */
+.main-content {
+    flex: 1; /* Ocupa o restante do espaço */
+    padding: 25px 30px;
+    color: var(--text-color);
+}
+
+.main-content section {
+    margin-bottom: 25px; /* Espaço menor entre seções */
+}
+
+.main-content h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.main-content h4 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.main-content span {
+    font-size: 0.8rem;
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Estilo para os itens de educação e experiência */
+.item {
+    /* Esta regra mágica evita que um item seja cortado entre duas páginas */
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+.main-content ul {
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.main-content li {
+    margin-bottom: 4px;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+/* 5. BOTÃO FLUTUANTE */
+.btn-print {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 30px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* 6. CONFIGURAÇÃO DE IMPRESSÃO (CRUCIAL) */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+    .resume-container {
+        box-shadow: none;
+        width: 100%;
+        /* Força a altura a se ajustar ao conteúdo */
+        height: auto; 
+        -webkit-print-color-adjust: exact;
+    }
+    .btn-print {
+        display: none;
+    }
+    
+    /* Ajuste fino para margens na impressão */
+    .sidebar, .main-content {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

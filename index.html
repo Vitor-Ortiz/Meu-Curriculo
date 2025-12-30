@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Vitor Ortiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="resume-container">
+        <aside class="sidebar">
+            <header>
+                <img src="photo.jpeg" alt="Foto de Perfil" class="profile-photo">
+                <h1 id="nome"></h1>
+                <p id="cargo" class="title"></p>
+            </header>
+
+            <section class="contact">
+                <h3>Contato</h3>
+                <p>📍 Barra Bonita , SP</p>
+                <p>📧 vitorortiz512@gmail.com</p>
+                <p>📱 (14) 98813-4137</p>
+                <p>💻 github.com/vitor-ortiz</p>
+            </section>
+
+            <section class="skills">
+                <h3>Hard Skills</h3>
+                <ul id="skills-list"></ul>
+            </section>
+
+            <section class="skills">
+                <h3>Soft Skills</h3>
+                <ul id="soft-skills-list"></ul>
+            </section>
+
+            <section class="skills">
+                <h3>Idiomas</h3>
+                <ul id="idiomas-list"></ul>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <section>
+                <h2>Resumo Profissional</h2>
+                <p id="resumo-text"></p>
+            </section>
+
+            <section>
+                <h2>Experiência</h2>
+                <div id="experiencias-container"></div>
+            </section>
+
+            <section>
+                <h2>Educação</h2>
+                <div class="item">
+                    <h4>Técnico em Programação para Internet</h4>
+                    <p>ETEC Comendador João Rays | 2023 - 2025</p>
+                    <span>Foco em desenvolvimento web, lógica de programação e banco de dados.</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <button class="btn-print" onclick="window.print()">Baixar PDF</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
