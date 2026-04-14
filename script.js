@@ -1,58 +1,86 @@
 const dadosCurriculo = {
     nome: "Vitor Ortiz de Camargo",
-    cargo: "Desenvolvedor Backend Iniciante",
+    cargo: "Desenvolvedor Mobile Júnior",
     
-    // Mantive o texto focado em aprendizado e segurança que você gostou
-    resumo: "Estudante de programação com forte interesse em Segurança da Informação e Backend. Sou curioso, gosto de aprender coisas novas e estou totalmente disposto a me dedicar para dominar novas tecnologias e desafios. Busco minha primeira oportunidade para aplicar o que aprendi na ETEC, colaborar com a equipe e crescer profissionalmente.",
+    resumo: "Desenvolvedor Mobile Júnior com atuação em Flutter e formação técnica em Programação para Internet pela ETEC Comendador João Rays. Tenho perfil dedicado, curioso e comprometido com evolução constante, unindo conhecimentos em desenvolvimento mobile, web, interfaces, lógica de programação e boas práticas de tecnologia. Busco crescer profissionalmente criando soluções funcionais, organizadas e úteis para o usuário, sempre aprendendo com a equipe e contribuindo com responsabilidade, constância e vontade de evoluir.",
     
     skills: [
-        // ORDEM NOVA: Backend Primeiro -> Ferramentas -> Frontend por último
-        "Node.js (Noções de Backend)",
-        "SQL Server & Firebase", // Adicionei SQL Server (muito importante!)
-        "JavaScript (Lógica e Manipulação)",
-        "Consumo de APIs (REST)",
-        "Noções de Segurança Web",
-        "Git e GitHub",
-        "HTML5 e CSS3" // Ficou por último como pedido
+        "Flutter",
+        "Dart",
+        "React",
+        "JavaScript",
+        "Node.js",
+        "C#",
+        "Python",
+        "HTML5 e CSS3",
+        "Figma",
+        "Noções de Cibersegurança",
+        "Git e GitHub"
     ],
 
     softSkills: [
-        "Disposição para Aprender",
-        "Curiosidade Técnica",
-        "Resolução de Problemas",
+        "Dedicação e Comprometimento",
+        "Facilidade para Aprender",
+        "Comunicação",
+        "Organização",
         "Trabalho em Equipe"
     ],
 
     idiomas: [
         "Português (Nativo)",
-        "Inglês (Intermediario)", 
+        "Inglês (Intermediário)", 
     ],
 
     experiencias: [
         {
-            cargo: "Projeto Pessoal",
-            empresa: "DevStudy (Plataforma de Estudos)",
-            periodo: "Jan 2025 - Atual",
+            cargo: "Desenvolvedor Mobile Júnior",
+            empresa: "Guia de Motéis",
+            periodo: "Atual",
             descricao: [
-                "Criação de um site para estudos de programação.",
-                "Desenvolvimento de sistema de login e cadastro de usuários.",
-                "Uso de inteligência artificial para responder dúvidas simples."
+                "Atuação no desenvolvimento e manutenção de aplicações mobile com Flutter.",
+                "Colaboração em melhorias de interface, usabilidade e experiência do usuário.",
+                "Participação em rotinas de desenvolvimento, correção de problemas e evolução de funcionalidades.",
+                "Aprendizado contínuo em ambiente profissional, com foco em qualidade, organização e trabalho em equipe."
             ],
-            techStack: "Techs: JavaScript, Firebase (Banco de Dados), HTML e CSS."
+            techStack: "Tecnologias: Flutter, Dart, desenvolvimento mobile, interfaces e boas práticas de código."
+        },
+        {
+            cargo: "Projeto de Conclusão de Curso",
+            empresa: "Plataforma de Pedidos White-label",
+            periodo: "2026",
+            descricao: [
+                "Desenvolvimento e apresentação de um TCC em C# inspirado no modelo do iFood.",
+                "Criação de uma proposta white-label voltada para personalização por empresas e estabelecimentos.",
+                "Participação nas etapas de planejamento, estruturação da solução, desenvolvimento e apresentação."
+            ],
+            techStack: "Tecnologias: C#, lógica de programação, modelagem da solução e apresentação técnica."
         },
         {
             cargo: "Freelancer Iniciante",
-            empresa: "Bot de Automação",
-            periodo: "Out 2024 - Nov 2024", 
+            empresa: "Site de Blog com Inteligência Artificial",
+            periodo: "Projeto independente", 
             descricao: [
-                "Desenvolvimento de um robô para postar conteúdo automaticamente.",
-                "Conexão com a inteligência artificial da OpenAI (ChatGPT).",
-                "Organização de dados JSON para o funcionamento do bot."
+                "Desenvolvimento de um site para postagem de blogs com geração automática de conteúdo.",
+                "Aplicação de recursos de inteligência artificial para apoiar a criação de posts.",
+                "Experiência prática com automação de conteúdo, aplicações web e criação digital."
             ],
-            techStack: "Techs: Node.js (Backend), JavaScript e API da OpenAI."
+            techStack: "Tecnologias: desenvolvimento web, JavaScript, automação e integração com IA."
+        },
+        {
+            cargo: "Freelancer Iniciante",
+            empresa: "Edição de vídeos para o canal Derivandoideias",
+            periodo: "Projeto independente",
+            descricao: [
+                "Edição de vídeos para um canal de amigos no YouTube.",
+                "Desenvolvimento de criatividade, atenção aos detalhes e senso estético.",
+                "Contato prático com produção de conteúdo digital e organização de materiais audiovisuais."
+            ],
+            techStack: "Competências: edição de vídeo, criatividade, atenção aos detalhes e produção digital."
         }
     ]
 };
+
+const nomeArquivoPdf = 'curriculo-vitor-ortiz.pdf';
 
 function renderizarCurriculo() {
     const preencherTexto = (id, texto) => {
@@ -76,30 +104,103 @@ function renderizarCurriculo() {
     const expContainer = document.getElementById('experiencias-container');
     if (expContainer) {
         expContainer.innerHTML = dadosCurriculo.experiencias.map(exp => `
-            <div class="item" style="margin-bottom: 25px;"> 
-                <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                    <h4 style="margin: 0;">${exp.cargo} <span style="font-weight: normal; font-size: 0.9em; color: #555;">| ${exp.empresa}</span></h4>
+            <div class="item"> 
+                <div class="experience-heading">
+                    <h4 class="experience-title">${exp.cargo} <span class="experience-company">| ${exp.empresa}</span></h4>
                 </div>
-                <span style="font-size: 0.85rem; color: #777; display: block; margin-bottom: 8px;">${exp.periodo}</span>
+                <span class="experience-period">${exp.periodo}</span>
                 
-                <ul style="margin-bottom: 10px;">
-                    ${exp.descricao.map(item => `<li style="margin-bottom: 4px;">${item}</li>`).join('')}
+                <ul>
+                    ${exp.descricao.map(item => `<li>${item}</li>`).join('')}
                 </ul>
                 
-                <p style="
-                    font-size: 0.8rem; 
-                    font-style: italic; 
-                    color: #444; 
-                    background-color: #f1f1f1; 
-                    padding: 5px 10px; 
-                    border-left: 4px solid #2c3e50;
-                    border-radius: 0 4px 4px 0;
-                ">
-                    ${exp.techStack}
-                </p>
+                <p class="tech-stack">${exp.techStack}</p>
             </div>
         `).join('');
     }
 }
 
-window.onload = renderizarCurriculo;
+function prepararImpressaoCompacta() {
+    const resume = document.querySelector('.resume-container');
+    if (!resume) return;
+
+    document.body.classList.add('print-fit');
+
+    const a4HeightPx = 1122;
+    const scale = Math.min(1, a4HeightPx / resume.scrollHeight);
+    document.documentElement.style.setProperty('--print-scale', scale.toFixed(3));
+}
+
+function limparModoPdf() {
+    document.body.classList.remove('generating-pdf', 'print-fit');
+    document.documentElement.style.removeProperty('--print-scale');
+}
+
+function imprimirComoFallback() {
+    prepararImpressaoCompacta();
+    window.print();
+}
+
+async function gerarPdf() {
+    const resume = document.querySelector('.resume-container');
+    const botaoPdf = document.getElementById('btn-pdf');
+
+    if (!resume || !botaoPdf) return;
+
+    const jsPdf = window.jspdf?.jsPDF;
+    const podeGerarPdf = typeof window.html2canvas === 'function' && typeof jsPdf === 'function';
+
+    if (!podeGerarPdf) {
+        imprimirComoFallback();
+        return;
+    }
+
+    const textoOriginal = botaoPdf.innerText;
+    botaoPdf.innerText = 'Gerando...';
+    botaoPdf.classList.add('loading');
+    botaoPdf.disabled = true;
+    document.body.classList.add('generating-pdf');
+
+    try {
+        await new Promise(resolve => requestAnimationFrame(resolve));
+
+        const canvas = await window.html2canvas(resume, {
+            scale: 2,
+            backgroundColor: '#ffffff',
+            useCORS: true,
+            logging: false
+        });
+
+        const pdf = new jsPdf({
+            orientation: 'portrait',
+            unit: 'mm',
+            format: 'a4'
+        });
+
+        const pageWidth = 210;
+        const pageHeight = 297;
+        const imgData = canvas.toDataURL('image/jpeg', 0.98);
+        const ratio = Math.min(pageWidth / canvas.width, pageHeight / canvas.height);
+        const imgWidth = canvas.width * ratio;
+        const imgHeight = canvas.height * ratio;
+        const marginX = (pageWidth - imgWidth) / 2;
+        const marginY = (pageHeight - imgHeight) / 2;
+
+        pdf.addImage(imgData, 'JPEG', marginX, marginY, imgWidth, imgHeight);
+        pdf.save(nomeArquivoPdf);
+    } catch (error) {
+        console.error('Erro ao gerar PDF:', error);
+        imprimirComoFallback();
+    } finally {
+        botaoPdf.innerText = textoOriginal;
+        botaoPdf.classList.remove('loading');
+        botaoPdf.disabled = false;
+        limparModoPdf();
+    }
+}
+
+document.getElementById('btn-pdf')?.addEventListener('click', gerarPdf);
+
+window.addEventListener('afterprint', limparModoPdf);
+
+window.addEventListener('DOMContentLoaded', renderizarCurriculo);

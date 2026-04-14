@@ -12,17 +12,18 @@
     <div class="resume-container">
         <aside class="sidebar">
             <header>
-                <img src="photo.jpeg" alt="Foto de Perfil" class="profile-photo">
+                <img src="photo.jpeg" alt="Foto de Vitor Ortiz de Camargo" class="profile-photo">
                 <h1 id="nome"></h1>
                 <p id="cargo" class="title"></p>
             </header>
 
             <section class="contact">
                 <h3>Contato</h3>
-                <p>📍 Barra Bonita , SP</p>
-                <p>📧 vitorortiz512@gmail.com</p>
-                <p>📱 (14) 98813-4137</p>
-                <p>💻 github.com/vitor-ortiz</p>
+                <p><strong>Local:</strong> Barra Bonita, SP</p>
+                <p><strong>Email:</strong> <a href="mailto:vitorortiz512@gmail.com">vitorortiz512@gmail.com</a></p>
+                <p><strong>Telefone:</strong> <a href="tel:+5514988134137">(14) 98813-4137</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/vitor-ortiz" target="_blank" rel="noreferrer">github.com/vitor-ortiz</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vitor-ortiz-de-camargo-833aa2402/" target="_blank" rel="noreferrer">vitor-ortiz-de-camargo</a></p>
             </section>
 
             <section class="skills">
@@ -56,15 +57,23 @@
                 <h2>Educação</h2>
                 <div class="item">
                     <h4>Técnico em Programação para Internet</h4>
-                    <p>ETEC Comendador João Rays | 2023 - 2025</p>
-                    <span>Foco em desenvolvimento web, lógica de programação e banco de dados.</span>
+                    <p>ETEC Comendador João Rays | 2023 - 2026</p>
+                    <span>Formação técnica integrada ao Ensino Médio, com foco em desenvolvimento de sites e aplicações, lógica de programação, interfaces, banco de dados, cibersegurança, prototipação e apresentação de projetos. Durante o curso, desenvolvi atividades práticas, trabalhos em equipe, seminários e um TCC em C#, fortalecendo comunicação, organização, autonomia, responsabilidade e adaptação a desafios.</span>
+                </div>
+
+                <div class="item">
+                    <h4>Ensino Médio</h4>
+                    <p>ETEC Comendador João Rays | 2023 - 2026</p>
+                    <span>Vivência escolar integrada à formação técnica, com participação em apresentações, debates, leituras coletivas, atividades em grupo e palestras na área de tecnologia. Essa experiência contribuiu para meu amadurecimento pessoal e profissional, desenvolvendo disciplina, constância, resiliência e capacidade de lidar com prazos e responsabilidades.</span>
                 </div>
             </section>
         </main>
     </div>
 
-    <button class="btn-print" onclick="window.print()">Baixar PDF</button>
+    <button class="btn-print" id="btn-pdf" type="button" aria-label="Gerar currículo em PDF">Baixar PDF</button>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 
