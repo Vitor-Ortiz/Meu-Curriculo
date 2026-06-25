@@ -2,20 +2,27 @@ const dadosCurriculo = {
     nome: "Vitor Ortiz de Camargo",
     cargo: "Desenvolvedor Mobile Júnior",
     
-    resumo: "Desenvolvedor Mobile Júnior com atuação em Flutter e formação técnica em Programação para Internet pela ETEC Comendador João Rays. Tenho perfil dedicado, curioso e comprometido com evolução constante, unindo conhecimentos em desenvolvimento mobile, web, interfaces, lógica de programação e boas práticas de tecnologia. Busco crescer profissionalmente criando soluções funcionais, organizadas e úteis para o usuário, sempre aprendendo com a equipe e contribuindo com responsabilidade, constância e vontade de evoluir.",
+    resumo: "Desenvolvedor Mobile Júnior com atuação em Flutter e formação técnica em Programação para Internet pela ETEC Comendador João Rays. Tenho experiência com desenvolvimento e manutenção evolutiva de aplicações mobile, versionamento com Git, responsividade, interfaces e apoio em processos de publicação de apps. Sou dedicado, atento aos detalhes e comprometido com evolução constante, buscando criar soluções funcionais, organizadas e úteis para o usuário.",
     
     skills: [
         "Flutter",
         "Dart",
-        "React",
         "JavaScript",
         "Node.js",
         "C#",
-        "Python",
         "HTML5 e CSS3",
+        "SQL e Banco de Dados",
+        "Firebase Console",
+        "Android Studio e Xcode",
+        "Google Play Console e App Store Connect",
+        "Publicação e Manutenção de Apps",
+        "Responsividade",
         "Figma",
+        "Prototipação",
+        "UI/UX Básico",
+        "Visual Studio Code",
         "Noções de Cibersegurança",
-        "Git e GitHub"
+        "Git e GitHub (Versionamento)"
     ],
 
     softSkills: [
@@ -23,7 +30,8 @@ const dadosCurriculo = {
         "Facilidade para Aprender",
         "Comunicação",
         "Organização",
-        "Trabalho em Equipe"
+        "Trabalho em Equipe",
+        "Atenção aos Detalhes"
     ],
 
     idiomas: [
@@ -37,12 +45,12 @@ const dadosCurriculo = {
             empresa: "Guia de Motéis",
             periodo: "Atual",
             descricao: [
-                "Atuação no desenvolvimento e manutenção de aplicações mobile com Flutter.",
-                "Colaboração em melhorias de interface, usabilidade e experiência do usuário.",
-                "Participação em rotinas de desenvolvimento, correção de problemas e evolução de funcionalidades.",
-                "Aprendizado contínuo em ambiente profissional, com foco em qualidade, organização e trabalho em equipe."
+                "Atuação no desenvolvimento e manutenção evolutiva de aplicações mobile com Flutter.",
+                "Colaboração em melhorias de interface, responsividade, usabilidade e experiência do usuário.",
+                "Uso de Git e GitHub para versionamento, organização de alterações e colaboração em equipe.",
+                "Apoio em rotinas relacionadas à publicação e manutenção de apps nas lojas Google Play e App Store."
             ],
-            techStack: "Tecnologias: Flutter, Dart, desenvolvimento mobile, interfaces e boas práticas de código."
+            techStack: "Tecnologias: Flutter, Dart, Git, Android Studio, Xcode, Google Play Console e App Store Connect."
         },
         {
             cargo: "Projeto de Conclusão de Curso",
