@@ -321,51 +321,123 @@ body.generating-pdf .profile-photo {
 }
 
 @media print {
+    html {
+        width: 210mm;
+        height: 297mm;
+    }
+
     body {
         background: none;
         padding: 0;
         margin: 0;
+        width: 210mm;
         height: 297mm;
         overflow: hidden;
+        display: block;
     }
+
     .resume-container {
         box-shadow: none;
         width: 210mm;
         max-width: none;
-        height: auto;
+        min-height: 0;
+        height: 297mm;
+        display: flex;
+        flex-direction: row;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
         animation: none;
         transform: scale(var(--print-scale, 1));
         transform-origin: top left;
     }
+
     .btn-print {
         display: none;
     }
     
-    .sidebar, .main-content {
-        padding-top: 15px;
-        padding-bottom: 15px;
+    .sidebar {
+        width: var(--sidebar-width);
+        flex: 0 0 var(--sidebar-width);
+        gap: 12px;
+        padding: 14px 16px;
     }
 
-    .sidebar {
-        gap: 18px;
+    .profile-photo {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 8px;
+    }
+
+    .sidebar h1 {
+        font-size: 1rem;
+    }
+
+    .sidebar .title,
+    .sidebar p,
+    .sidebar li {
+        font-size: 0.72rem;
+        line-height: 1.25;
+        margin-bottom: 4px;
+    }
+
+    .sidebar h3 {
+        font-size: 0.78rem;
+        margin-bottom: 6px;
+        padding-bottom: 4px;
+    }
+
+    .main-content {
+        flex: 1;
+        padding: 14px 20px;
+    }
+
+    .main-content h2 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
     }
 
     .main-content section {
-        margin-bottom: 16px;
+        margin-bottom: 10px;
+    }
+
+    .main-content h4 {
+        font-size: 0.84rem;
+    }
+
+    .main-content span,
+    .experience-period {
+        font-size: 0.68rem;
+        margin-bottom: 4px;
     }
 
     .item {
-        margin-bottom: 14px;
+        margin-bottom: 8px;
+    }
+
+    .main-content ul {
+        margin-left: 15px;
+        margin-bottom: 5px;
     }
 
     .main-content li {
-        line-height: 1.3;
+        font-size: 0.76rem;
+        line-height: 1.22;
+        margin-bottom: 2px;
     }
 
     .tech-stack {
-        padding: 4px 8px;
+        font-size: 0.68rem;
+        padding: 3px 7px;
+    }
+
+    .experience-heading {
+        display: flex;
+    }
+
+    .experience-company {
+        display: inline;
+        margin-top: 0;
     }
 
     .main-content section,
