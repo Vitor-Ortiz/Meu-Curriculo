@@ -1,222 +1,305 @@
+/* ==========================================================================
+   DADOS DO CURRÍCULO
+   Para atualizar o currículo, edite SOMENTE este objeto.
+   ========================================================================== */
 const dadosCurriculo = {
     nome: "Vitor Ortiz de Camargo",
-    cargo: "Desenvolvedor Mobile Júnior",
-    
-    resumo: "Desenvolvedor Mobile Júnior com foco em Flutter e Dart, atuando na manutenção evolutiva de aplicações mobile, melhorias de interface, responsividade e apoio em processos de publicação nas lojas. Tenho experiência com Git, Android Studio, Xcode, Figma e colaboração em equipe. Estou em constante aprendizado, buscando conhecer novas linguagens, tecnologias e áreas do desenvolvimento para construir soluções organizadas, funcionais e com boa experiência para o usuário.",
-    
-    skills: [
-        "Flutter",
-        "Dart",
-        "JavaScript",
-        "Node.js",
-        "C#",
-        "HTML5 e CSS3",
-        "SQL e Banco de Dados",
-        "Firebase Console",
-        "Android Studio e Xcode",
-        "Google Play Console e App Store Connect",
-        "Publicação e Manutenção de Apps",
-        "Responsividade",
-        "Figma",
-        "Prototipação",
-        "UI/UX Básico",
-        "Visual Studio Code",
-        "Noções de Cibersegurança",
-        "Git e GitHub (Versionamento)"
+    cargo: "Desenvolvedor Júnior · Atendimento e Suporte",
+    tagline: "Tecnologia, atendimento ao cliente e organização de processos",
+
+    contato: [
+        { icone: "pin", rotulo: "Localização", texto: "Barra Bonita, SP · Disponível para remoto" },
+        { icone: "mail", rotulo: "E-mail", texto: "vitorortiz512@gmail.com", href: "mailto:vitorortiz512@gmail.com" },
+        { icone: "phone", rotulo: "Telefone", texto: "(14) 98813-4137", href: "tel:+5514988134137" },
+        { icone: "linkedin", rotulo: "LinkedIn", texto: "vitor-ortiz-de-camargo", href: "https://www.linkedin.com/in/vitor-ortiz-de-camargo-833aa2402/" },
+        { icone: "github", rotulo: "Portfólio", texto: "github.com/vitor-ortiz", href: "https://github.com/vitor-ortiz" }
+    ],
+
+    resumo: "Profissional júnior com formação técnica em Programação para Internet, unindo tecnologia, atendimento ao cliente e organização de processos. Desenvolvo e mantenho aplicativos em Flutter e Dart publicados na Google Play e na App Store, com foco em interface, responsividade e experiência do usuário. Tenho experiência em atender clientes com clareza e paciência e em rotinas administrativas como planilhas de controle, cadastros, notas fiscais e documentos. Organizado, atento aos detalhes e rápido para aprender ferramentas novas.",
+
+    competencias: [
+        {
+            grupo: "Atendimento e Comunicação",
+            icone: "chat",
+            itens: ["Atendimento ao cliente", "Comunicação escrita e verbal", "Resolução de problemas", "Organização de demandas simultâneas", "Relacionamento interpessoal", "Redes sociais"]
+        },
+        {
+            grupo: "Administrativo e Processos",
+            icone: "clipboard",
+            itens: ["Excel e Planilhas Google (intermediário)", "Pacote Office", "Planilhas de controle", "Cadastros e documentos", "Notas fiscais", "Organização de rotinas"]
+        },
+        {
+            grupo: "Design e Produto",
+            icone: "pen",
+            itens: ["Figma", "Prototipação de telas e fluxos", "UI/UX", "Hierarquia visual e legibilidade", "Responsividade"]
+        },
+        {
+            grupo: "Desenvolvimento",
+            icone: "code",
+            itens: ["Flutter", "Dart", "JavaScript", "Node.js", "C#", "HTML5 e CSS3", "SQL", "Firebase", "Git e GitHub"]
+        },
+        {
+            grupo: "Mobile e Publicação",
+            icone: "phone-app",
+            itens: ["Android Studio", "Xcode", "Google Play Console", "App Store Connect", "Manutenção de apps em produção"]
+        }
     ],
 
     softSkills: [
-        "Dedicação e Comprometimento",
-        "Facilidade para Aprender",
-        "Comunicação",
         "Organização",
-        "Trabalho em Equipe",
-        "Atenção aos Detalhes"
+        "Atenção aos detalhes",
+        "Paciência",
+        "Proatividade",
+        "Trabalho em equipe",
+        "Aprendizado rápido"
     ],
 
     idiomas: [
-        "Português (Nativo)",
-        "Inglês (Intermediário)", 
+        { nome: "Português", nivel: "Nativo", pontos: 5 },
+        { nome: "Inglês", nivel: "Intermediário", pontos: 3 }
     ],
 
     experiencias: [
         {
             cargo: "Desenvolvedor Mobile Júnior",
             empresa: "Guia de Motéis",
-            periodo: "2026 - Atual",
+            periodo: "2026 — Atual",
             descricao: [
-                "Desenvolvimento e manutenção evolutiva de aplicações mobile com Flutter e Dart.",
-                "Implementação de melhorias em interface, responsividade, usabilidade e experiência do usuário.",
-                "Uso de Git e GitHub para versionamento, organização de alterações e colaboração com o time.",
-                "Apoio em rotinas de publicação e manutenção de apps na Google Play e na App Store."
+                "Manutenção evolutiva de aplicações mobile em Flutter e Dart, com apps ativos na Google Play e na App Store.",
+                "Melhorias de interface, responsividade e usabilidade a partir de retornos de uso real dos usuários.",
+                "Versionamento e organização das alterações com Git e GitHub, em colaboração com o time.",
+                "Apoio nas rotinas de publicação, atualização e acompanhamento dos apps nas lojas."
             ],
-            techStack: "Tecnologias: Flutter, Dart, Git, Android Studio, Xcode, Google Play Console e App Store Connect."
+            tech: ["Flutter", "Dart", "Git", "Android Studio", "Xcode", "Play Console", "App Store Connect"]
         }
+
+        /* ------------------------------------------------------------------
+           ADICIONE AQUI sua experiência de atendimento e/ou administrativa.
+           Copie o bloco abaixo, descomente e preencha com os dados reais —
+           é o que mais pesa nas vagas de atendimento e administrativo.
+
+        ,{
+            cargo: "Atendimento ao Cliente",
+            empresa: "Nome do local",
+            periodo: "2024 — 2025",
+            descricao: [
+                "Atendimento a clientes por WhatsApp, telefone e presencialmente.",
+                "Organização de planilhas de controle, cadastros e notas fiscais.",
+                "Registro e acompanhamento das demandas até a resolução."
+            ],
+            tech: ["Excel", "WhatsApp", "Pacote Office"]
+        }
+        ------------------------------------------------------------------ */
     ],
 
     projetos: [
         {
-            cargo: "Projeto de Conclusão de Curso",
-            empresa: "Plataforma de Pedidos White-label",
+            titulo: "Plataforma de Pedidos White-label",
+            contexto: "Projeto de Conclusão de Curso · ETEC",
             periodo: "2026",
             descricao: [
-                "Desenvolvimento e apresentação de uma plataforma de pedidos em C#, inspirada no modelo do iFood.",
-                "Criação de uma proposta white-label para personalização por empresas e estabelecimentos.",
-                "Participação no planejamento, estruturação da solução, desenvolvimento e apresentação técnica."
+                "Plataforma de pedidos em C# inspirada no modelo do iFood, com proposta white-label para personalização por estabelecimento.",
+                "Atuação no planejamento, modelagem da solução, desenvolvimento e apresentação técnica para banca."
             ],
-            techStack: "Tecnologias: C#, Figma, lógica de programação, prototipação, modelagem da solução e apresentação técnica."
+            tech: ["C#", "Figma", "Prototipação", "Modelagem de dados"]
         },
         {
-            cargo: "Projeto Independente",
-            empresa: "Site de Blog com Inteligência Artificial",
-            periodo: "Projeto independente", 
+            titulo: "Blog com Inteligência Artificial",
+            contexto: "Projeto independente",
             descricao: [
-                "Desenvolvimento de um site para publicação de blogs com geração automática de conteúdo.",
-                "Aplicação de recursos de inteligência artificial para apoiar a criação de posts.",
-                "Experiência prática com automação de conteúdo, aplicações web e criação digital."
+                "Site de publicação de posts com geração automática de conteúdo apoiada por IA.",
+                "Prática com automação, integração de APIs e organização de conteúdo digital."
             ],
-            techStack: "Tecnologias: desenvolvimento web, JavaScript, automação e integração com IA."
+            tech: ["JavaScript", "Web", "Automação", "Integração com IA"]
         },
         {
-            cargo: "Projeto Independente",
-            empresa: "Edição de vídeos para o canal Derivandoideias",
-            periodo: "Projeto independente",
+            titulo: "Edição de vídeos — canal Derivandoideias",
+            contexto: "Projeto independente",
             descricao: [
-                "Edição de vídeos para um canal de amigos no YouTube.",
-                "Desenvolvimento de criatividade, atenção aos detalhes e senso estético.",
-                "Contato prático com produção de conteúdo digital e organização de materiais audiovisuais."
+                "Edição de vídeos para canal no YouTube, com atenção a ritmo, clareza e senso estético.",
+                "Rotina de organização de arquivos, prazos e materiais audiovisuais."
             ],
-            techStack: "Competências: edição de vídeo, criatividade, atenção aos detalhes e produção digital."
+            tech: ["Edição de vídeo", "Produção digital"]
+        }
+    ],
+
+    educacao: [
+        {
+            curso: "Técnico em Programação para Internet",
+            instituicao: "ETEC Comendador João Rays",
+            periodo: "2023 — 2026",
+            descricao: "Formação técnica integrada ao Ensino Médio: desenvolvimento web, lógica de programação, interfaces, banco de dados, cibersegurança, prototipação e apresentação de projetos."
         }
     ]
 };
 
-const nomeArquivoPdf = 'curriculo-vitor-ortiz.pdf';
+/* ==========================================================================
+   HELPERS
+   ========================================================================== */
+const escapar = (valor) => String(valor)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+const definirTexto = (id, texto) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = texto;
+};
+
+const definirHtml = (id, html) => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = html;
+};
+
+const icone = (nome) => `<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-${nome}"></use></svg>`;
+
+const chips = (itens) => itens.map(item => `<li class="chip">${escapar(item)}</li>`).join('');
+
+const topicos = (itens) => itens.map(item => `<li>${escapar(item)}</li>`).join('');
+
+/* ==========================================================================
+   RENDERIZAÇÃO
+   ========================================================================== */
+function renderizarIdentidade() {
+    definirTexto('nome', dadosCurriculo.nome);
+    definirTexto('cargo', dadosCurriculo.cargo);
+    definirTexto('tagline', dadosCurriculo.tagline);
+    definirTexto('resumo-text', dadosCurriculo.resumo);
+    document.title = `${dadosCurriculo.nome} — ${dadosCurriculo.cargo}`;
+}
+
+function renderizarContato() {
+    definirHtml('contato-list', dadosCurriculo.contato.map(item => {
+        const externo = item.href && item.href.startsWith('http');
+        const conteudo = item.href
+            ? `<a href="${escapar(item.href)}"${externo ? ' target="_blank" rel="noreferrer"' : ''}>${escapar(item.texto)}</a>`
+            : `<span>${escapar(item.texto)}</span>`;
+        return `<li>${icone(item.icone)}<span class="contato-valor">${conteudo}</span></li>`;
+    }).join(''));
+}
+
+function renderizarCompetencias() {
+    definirHtml('competencias-container', dadosCurriculo.competencias.map(grupo => `
+        <div class="competencia">
+            <h3>${icone(grupo.icone)}${escapar(grupo.grupo)}</h3>
+            <ul class="chips">${chips(grupo.itens)}</ul>
+        </div>
+    `).join(''));
+}
+
+function renderizarPerfilLateral() {
+    definirHtml('soft-skills-list', chips(dadosCurriculo.softSkills));
+
+    definirHtml('idiomas-list', dadosCurriculo.idiomas.map(idioma => `
+        <li class="idioma">
+            <div class="idioma-info">
+                <span class="idioma-nome">${escapar(idioma.nome)}</span>
+                <span class="idioma-nivel">${escapar(idioma.nivel)}</span>
+            </div>
+            <span class="medidor" role="img" aria-label="Nível ${escapar(idioma.nivel)}">
+                ${Array.from({ length: 5 }, (_, i) => `<i class="${i < idioma.pontos ? 'on' : ''}"></i>`).join('')}
+            </span>
+        </li>
+    `).join(''));
+}
+
+function renderizarItens(containerId, itens) {
+    definirHtml(containerId, itens.map(item => `
+        <article class="item">
+            <div class="item-head">
+                <h3 class="item-titulo">${escapar(item.cargo || item.titulo)}</h3>
+                ${item.periodo ? `<span class="item-periodo">${escapar(item.periodo)}</span>` : ''}
+            </div>
+            <p class="item-sub">${escapar(item.empresa || item.contexto)}</p>
+            <ul class="item-topicos">${topicos(item.descricao)}</ul>
+            ${item.tech ? `<ul class="chips chips-tech">${chips(item.tech)}</ul>` : ''}
+        </article>
+    `).join(''));
+}
+
+function renderizarEducacao() {
+    definirHtml('educacao-container', dadosCurriculo.educacao.map(edu => `
+        <article class="item">
+            <div class="item-head">
+                <h3 class="item-titulo">${escapar(edu.curso)}</h3>
+                <span class="item-periodo">${escapar(edu.periodo)}</span>
+            </div>
+            <p class="item-sub">${escapar(edu.instituicao)}</p>
+            <p class="item-texto">${escapar(edu.descricao)}</p>
+        </article>
+    `).join(''));
+}
 
 function renderizarCurriculo() {
-    const preencherTexto = (id, texto) => {
-        const el = document.getElementById(id);
-        if (el) el.innerText = texto;
-    };
-
-    const preencherLista = (id, lista) => {
-        const el = document.getElementById(id);
-        if (el) el.innerHTML = lista.map(item => `<li>${item}</li>`).join('');
-    };
-
-    preencherTexto('nome', dadosCurriculo.nome);
-    preencherTexto('cargo', dadosCurriculo.cargo);
-    preencherTexto('resumo-text', dadosCurriculo.resumo);
-
-    preencherLista('skills-list', dadosCurriculo.skills);
-    preencherLista('soft-skills-list', dadosCurriculo.softSkills);
-    preencherLista('idiomas-list', dadosCurriculo.idiomas);
-
-    const renderizarItens = (containerId, itens) => {
-        const container = document.getElementById(containerId);
-        if (!container) return;
-
-        container.innerHTML = itens.map(item => `
-            <div class="item"> 
-                <div class="experience-heading">
-                    <h4 class="experience-title">${item.cargo} <span class="experience-company">| ${item.empresa}</span></h4>
-                </div>
-                <span class="experience-period">${item.periodo}</span>
-                
-                <ul>
-                    ${item.descricao.map(descricao => `<li>${descricao}</li>`).join('')}
-                </ul>
-                
-                <p class="tech-stack">${item.techStack}</p>
-            </div>
-        `).join('');
-    };
-
+    renderizarIdentidade();
+    renderizarContato();
+    renderizarCompetencias();
+    renderizarPerfilLateral();
     renderizarItens('experiencias-container', dadosCurriculo.experiencias);
     renderizarItens('projetos-container', dadosCurriculo.projetos);
+    renderizarEducacao();
 }
 
-function prepararImpressaoCompacta() {
-    const resume = document.querySelector('.resume-container');
-    if (!resume) return;
+/* ==========================================================================
+   TEMA (claro / escuro)
+   ========================================================================== */
+const CHAVE_TEMA = 'curriculo:tema';
 
-    document.body.classList.add('print-fit');
-
-    const a4HeightPx = 1122;
-    const scale = Math.min(1, a4HeightPx / resume.scrollHeight);
-    document.documentElement.style.setProperty('--print-scale', scale.toFixed(3));
+function lerTemaSalvo() {
+    try {
+        return localStorage.getItem(CHAVE_TEMA);
+    } catch {
+        return null;
+    }
 }
 
-function limparModoPdf() {
-    document.body.classList.remove('generating-pdf', 'print-fit');
-    document.documentElement.style.removeProperty('--print-scale');
+function salvarTema(tema) {
+    try {
+        localStorage.setItem(CHAVE_TEMA, tema);
+    } catch {
+        /* navegação privada ou storage bloqueado: segue sem persistir */
+    }
 }
 
-function imprimirComoFallback() {
-    prepararImpressaoCompacta();
+function aplicarTema(tema) {
+    document.documentElement.dataset.theme = tema;
+    const botao = document.getElementById('btn-tema');
+    if (botao) {
+        botao.setAttribute('aria-pressed', String(tema === 'dark'));
+        botao.setAttribute('title', tema === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro');
+    }
+}
+
+const temaAtual = () => document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+
+function iniciarTema() {
+    const salvo = lerTemaSalvo();
+    const preferencia = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    aplicarTema(salvo || preferencia);
+}
+
+/* ==========================================================================
+   IMPRESSÃO / PDF
+   O PDF sai pelo próprio navegador: texto vetorial, selecionável e
+   legível por sistemas de triagem de currículo (ATS).
+   ========================================================================== */
+function imprimir() {
     window.print();
 }
 
-async function gerarPdf() {
-    const resume = document.querySelector('.resume-container');
-    const botaoPdf = document.getElementById('btn-pdf');
+/* ==========================================================================
+   INICIALIZAÇÃO
+   ========================================================================== */
+iniciarTema();
 
-    if (!resume || !botaoPdf) return;
+window.addEventListener('DOMContentLoaded', () => {
+    renderizarCurriculo();
 
-    const jsPdf = window.jspdf?.jsPDF;
-    const podeGerarPdf = typeof window.html2canvas === 'function' && typeof jsPdf === 'function';
-
-    if (!podeGerarPdf) {
-        imprimirComoFallback();
-        return;
-    }
-
-    const textoOriginal = botaoPdf.innerText;
-    botaoPdf.innerText = 'Gerando...';
-    botaoPdf.classList.add('loading');
-    botaoPdf.disabled = true;
-    document.body.classList.add('generating-pdf');
-
-    try {
-        await new Promise(resolve => requestAnimationFrame(resolve));
-
-        const canvas = await window.html2canvas(resume, {
-            scale: 2,
-            backgroundColor: '#ffffff',
-            useCORS: true,
-            logging: false
-        });
-
-        const pdf = new jsPdf({
-            orientation: 'portrait',
-            unit: 'mm',
-            format: 'a4'
-        });
-
-        const pageWidth = 210;
-        const pageHeight = 297;
-        const imgData = canvas.toDataURL('image/jpeg', 0.98);
-        const ratio = Math.min(pageWidth / canvas.width, pageHeight / canvas.height);
-        const imgWidth = canvas.width * ratio;
-        const imgHeight = canvas.height * ratio;
-        const marginX = (pageWidth - imgWidth) / 2;
-        const marginY = (pageHeight - imgHeight) / 2;
-
-        pdf.addImage(imgData, 'JPEG', marginX, marginY, imgWidth, imgHeight);
-        pdf.save(nomeArquivoPdf);
-    } catch (error) {
-        console.error('Erro ao gerar PDF:', error);
-        imprimirComoFallback();
-    } finally {
-        botaoPdf.innerText = textoOriginal;
-        botaoPdf.classList.remove('loading');
-        botaoPdf.disabled = false;
-        limparModoPdf();
-    }
-}
-
-document.getElementById('btn-pdf')?.addEventListener('click', gerarPdf);
-
-window.addEventListener('afterprint', limparModoPdf);
-
-window.addEventListener('DOMContentLoaded', renderizarCurriculo);
+    document.getElementById('btn-pdf')?.addEventListener('click', imprimir);
+    document.getElementById('btn-tema')?.addEventListener('click', () => {
+        const proximo = temaAtual() === 'dark' ? 'light' : 'dark';
+        aplicarTema(proximo);
+        salvarTema(proximo);
+    });
+});

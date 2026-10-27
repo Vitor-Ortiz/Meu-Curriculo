@@ -1,78 +1,176 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Vitor Ortiz</title>
+    <title>Vitor Ortiz de Camargo — Currículo</title>
+    <meta name="description" content="Currículo de Vitor Ortiz de Camargo — tecnologia, atendimento ao cliente e organização de processos. Flutter, Dart, Figma, Excel e Pacote Office.">
+    <meta name="author" content="Vitor Ortiz de Camargo">
+    <meta name="theme-color" content="#16233c">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Vitor Ortiz de Camargo — Currículo">
+    <meta property="og:description" content="Desenvolvedor Júnior · Atendimento e Suporte. Tecnologia, atendimento ao cliente e organização de processos.">
+    <meta property="og:image" content="photo.jpg">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="resume-container">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Biblioteca de ícones -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-pin" viewBox="0 0 24 24">
+            <path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z" />
+            <circle cx="12" cy="10" r="2.6" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2.5" />
+            <path d="m3.6 7.2 8.4 5.6 8.4-5.6" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+            <path d="M21 16.9v2.6a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3A19.1 19.1 0 0 1 4.4 13 19.5 19.5 0 0 1 1.5 4.4 2 2 0 0 1 3.5 2.2h2.6a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.2 10a15 15 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
+        </symbol>
+        <symbol id="i-github" viewBox="0 0 24 24">
+            <path fill="currentColor" stroke="none" d="M12 2C6.5 2 2 6.6 2 12.3c0 4.5 2.9 8.3 6.8 9.7.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.4-3.4-1.4-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.3 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.2-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10.2 10.2 0 0 0 22 12.3C22 6.6 17.5 2 12 2z" />
+        </symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+            <path fill="currentColor" stroke="none" d="M5 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm7 0h3.8v1.6h.1c.5-.9 1.8-1.9 3.7-1.9 3.9 0 4.6 2.4 4.6 5.6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9.5z" />
+        </symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24">
+            <path d="M21 11.8a8.3 8.3 0 0 1-8.9 8.3 9.3 9.3 0 0 1-2.9-.5L4 21.3l1.6-4.2A8.1 8.1 0 0 1 3 11.8 8.3 8.3 0 0 1 12 3.5a8.3 8.3 0 0 1 9 8.3z" />
+        </symbol>
+        <symbol id="i-clipboard" viewBox="0 0 24 24">
+            <path d="M9 4H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2" />
+            <rect x="9" y="2.5" width="6" height="3.5" rx="1.2" />
+            <path d="M9 11h6M9 15h4" />
+        </symbol>
+        <symbol id="i-pen" viewBox="0 0 24 24">
+            <path d="M12.5 20.5H21" />
+            <path d="M16.6 3.4a2.1 2.1 0 0 1 3 3L7.6 18.4l-4 1 1-4L16.6 3.4z" />
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24">
+            <path d="m8.5 6.5-5.5 5.5 5.5 5.5M15.5 6.5l5.5 5.5-5.5 5.5" />
+        </symbol>
+        <symbol id="i-phone-app" viewBox="0 0 24 24">
+            <rect x="6.5" y="2.5" width="11" height="19" rx="2.5" />
+            <path d="M10.8 18.4h2.4" />
+        </symbol>
+        <symbol id="i-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4.5 20.5a7.5 7.5 0 0 1 15 0" />
+        </symbol>
+        <symbol id="i-briefcase" viewBox="0 0 24 24">
+            <rect x="2.5" y="7" width="19" height="13.5" rx="2.5" />
+            <path d="M8.5 7V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7" />
+        </symbol>
+        <symbol id="i-folder" viewBox="0 0 24 24">
+            <path d="M3 7a2 2 0 0 1 2-2h3.6l2 2.2H19a2 2 0 0 1 2 2v8.8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
+        </symbol>
+        <symbol id="i-graduation" viewBox="0 0 24 24">
+            <path d="M22 9 12 4.2 2 9l10 4.8L22 9z" />
+            <path d="M6.5 11.3V16c0 1.6 2.5 2.9 5.5 2.9s5.5-1.3 5.5-2.9v-4.7" />
+        </symbol>
+        <symbol id="i-printer" viewBox="0 0 24 24">
+            <path d="M6.5 9.5v-6h11v6" />
+            <path d="M6.5 17.5h-2a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h15a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" />
+            <rect x="6.5" y="13.5" width="11" height="7" rx="1.5" />
+        </symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4" />
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+            <path d="M21 13.2A9 9 0 1 1 10.8 3a7 7 0 0 0 10.2 10.2z" />
+        </symbol>
+    </svg>
+
+    <article class="resume" id="curriculo">
         <aside class="sidebar">
-            <header>
-                <img src="photo.png" alt="Foto de Vitor Ortiz de Camargo" class="profile-photo">
+            <header class="identidade">
+                <img class="foto" src="photo.jpg" alt="Foto de Vitor Ortiz de Camargo" width="512" height="512">
                 <h1 id="nome"></h1>
-                <p id="cargo" class="title"></p>
+                <p class="cargo" id="cargo"></p>
+                <p class="tagline" id="tagline"></p>
             </header>
 
-            <section class="contact">
-                <h3>Contato</h3>
-                <p><strong>Local:</strong> Barra Bonita, SP</p>
-                <p><strong>Email:</strong> <a href="mailto:vitorortiz512@gmail.com">vitorortiz512@gmail.com</a></p>
-                <p><strong>Telefone:</strong> <a href="tel:+5514988134137">(14) 98813-4137</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/vitor-ortiz" target="_blank" rel="noreferrer">github.com/vitor-ortiz</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vitor-ortiz-de-camargo-833aa2402/" target="_blank" rel="noreferrer">vitor-ortiz-de-camargo</a></p>
+            <section class="bloco">
+                <h2>Contato</h2>
+                <ul class="contato" id="contato-list"></ul>
             </section>
 
-            <section class="skills">
-                <h3>Hard Skills</h3>
-                <ul id="skills-list"></ul>
+            <section class="bloco">
+                <h2>Perfil</h2>
+                <ul class="chips" id="soft-skills-list"></ul>
             </section>
 
-            <section class="skills">
-                <h3>Soft Skills</h3>
-                <ul id="soft-skills-list"></ul>
-            </section>
-
-            <section class="skills">
-                <h3>Idiomas</h3>
-                <ul id="idiomas-list"></ul>
+            <section class="bloco">
+                <h2>Idiomas</h2>
+                <ul class="idiomas" id="idiomas-list"></ul>
             </section>
         </aside>
 
-        <main class="main-content">
-            <section>
-                <h2>Resumo Profissional</h2>
-                <p id="resumo-text"></p>
+        <div class="content" id="conteudo">
+            <section class="secao">
+                <h2><svg class="icone"><use href="#i-user" /></svg>Resumo profissional</h2>
+                <p class="resumo" id="resumo-text"></p>
             </section>
 
-            <section>
-                <h2>Experiência Profissional</h2>
+            <section class="secao">
+                <h2><svg class="icone"><use href="#i-clipboard" /></svg>Competências</h2>
+                <div class="competencias" id="competencias-container"></div>
+            </section>
+
+            <section class="secao">
+                <h2><svg class="icone"><use href="#i-briefcase" /></svg>Experiência profissional</h2>
                 <div id="experiencias-container"></div>
             </section>
 
-            <section>
-                <h2>Projetos</h2>
+            <section class="secao">
+                <h2><svg class="icone"><use href="#i-folder" /></svg>Projetos</h2>
                 <div id="projetos-container"></div>
             </section>
 
-            <section>
-                <h2>Educação</h2>
-                <div class="item">
-                    <h4>Técnico em Programação para Internet</h4>
-                    <p>ETEC Comendador João Rays | 2023 - 2026</p>
-                    <span>Formação técnica integrada ao Ensino Médio, com foco em desenvolvimento web, lógica de programação, interfaces, banco de dados, cibersegurança, prototipação e apresentação de projetos.</span>
-                </div>
+            <section class="secao">
+                <h2><svg class="icone"><use href="#i-graduation" /></svg>Formação</h2>
+                <div id="educacao-container"></div>
             </section>
-        </main>
+        </div>
+    </article>
+
+    <div class="acoes">
+        <button class="btn btn-icone btn-tema" id="btn-tema" type="button" aria-pressed="false" aria-label="Alternar tema claro e escuro">
+            <svg class="icone sol"><use href="#i-moon" /></svg>
+            <svg class="icone lua"><use href="#i-sun" /></svg>
+        </button>
+        <button class="btn btn-principal" id="btn-pdf" type="button">
+            <svg class="icone"><use href="#i-printer" /></svg>
+            Baixar PDF
+        </button>
     </div>
 
-    <button class="btn-print" id="btn-pdf" type="button" aria-label="Gerar currículo em PDF">Baixar PDF</button>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vitor Ortiz de Camargo",
+        "jobTitle": "Desenvolvedor Júnior · Atendimento e Suporte",
+        "email": "mailto:vitorortiz512@gmail.com",
+        "telephone": "+55-14-98813-4137",
+        "address": { "@type": "PostalAddress", "addressLocality": "Barra Bonita", "addressRegion": "SP", "addressCountry": "BR" },
+        "sameAs": [
+            "https://github.com/vitor-ortiz",
+            "https://www.linkedin.com/in/vitor-ortiz-de-camargo-833aa2402/"
+        ]
+    }
+    </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 
