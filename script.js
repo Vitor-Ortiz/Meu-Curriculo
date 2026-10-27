@@ -1,305 +1,367 @@
-/* ==========================================================================
-   DADOS DO CURRÍCULO
-   Para atualizar o currículo, edite SOMENTE este objeto.
-   ========================================================================== */
+// ============================================
+// FONTE ÚNICA DE DADOS DO CURRÍCULO
+// ============================================
 const dadosCurriculo = {
+    // Identidade
     nome: "Vitor Ortiz de Camargo",
-    cargo: "Desenvolvedor Júnior · Atendimento e Suporte",
-    tagline: "Tecnologia, atendimento ao cliente e organização de processos",
+    tituloProfissional: "Tecnologia | Atendimento | Organização de Processos",
+    localizacao: "Barra Bonita, SP",
+    telefone: "+55 14 98813-4137",
+    email: "vitorortiz512@gmail.com",
+    github: "https://github.com/vitor-ortiz",
+    linkedin: "https://www.linkedin.com/in/vitor-ortiz-de-camargo-833aa2402/",
 
-    contato: [
-        { icone: "pin", rotulo: "Localização", texto: "Barra Bonita, SP · Disponível para remoto" },
-        { icone: "mail", rotulo: "E-mail", texto: "vitorortiz512@gmail.com", href: "mailto:vitorortiz512@gmail.com" },
-        { icone: "phone", rotulo: "Telefone", texto: "(14) 98813-4137", href: "tel:+5514988134137" },
-        { icone: "linkedin", rotulo: "LinkedIn", texto: "vitor-ortiz-de-camargo", href: "https://www.linkedin.com/in/vitor-ortiz-de-camargo-833aa2402/" },
-        { icone: "github", rotulo: "Portfólio", texto: "github.com/vitor-ortiz", href: "https://github.com/vitor-ortiz" }
-    ],
 
-    resumo: "Profissional júnior com formação técnica em Programação para Internet, unindo tecnologia, atendimento ao cliente e organização de processos. Desenvolvo e mantenho aplicativos em Flutter e Dart publicados na Google Play e na App Store, com foco em interface, responsividade e experiência do usuário. Tenho experiência em atender clientes com clareza e paciência e em rotinas administrativas como planilhas de controle, cadastros, notas fiscais e documentos. Organizado, atento aos detalhes e rápido para aprender ferramentas novas.",
+    // Resumo Profissional
+    resumo: `Profissional com experiência prática em desenvolvimento e manutenção de aplicações mobile (Flutter/Dart), versionamento com Git e apoio em publicação de apps nas lojas oficiais. Conhecimentos em JavaScript, Node.js, C#, SQL e ferramentas de produtividade. Familiaridade com rotinas administrativas, organização de processos e atendimento ao público. Comunicação clara, atenção aos detalhes e facilidade para aprender novas tecnologias e fluxos de trabalho. Atualmente cursando Sistemas de Programação na FGP. Perfil dedicado, organizado e focado em entregar soluções funcionais e bem estruturadas.`,
 
-    competencias: [
-        {
-            grupo: "Atendimento e Comunicação",
-            icone: "chat",
-            itens: ["Atendimento ao cliente", "Comunicação escrita e verbal", "Resolução de problemas", "Organização de demandas simultâneas", "Relacionamento interpessoal", "Redes sociais"]
-        },
-        {
-            grupo: "Administrativo e Processos",
-            icone: "clipboard",
-            itens: ["Excel e Planilhas Google (intermediário)", "Pacote Office", "Planilhas de controle", "Cadastros e documentos", "Notas fiscais", "Organização de rotinas"]
-        },
-        {
-            grupo: "Design e Produto",
-            icone: "pen",
-            itens: ["Figma", "Prototipação de telas e fluxos", "UI/UX", "Hierarquia visual e legibilidade", "Responsividade"]
-        },
-        {
-            grupo: "Desenvolvimento",
-            icone: "code",
-            itens: ["Flutter", "Dart", "JavaScript", "Node.js", "C#", "HTML5 e CSS3", "SQL", "Firebase", "Git e GitHub"]
-        },
-        {
-            grupo: "Mobile e Publicação",
-            icone: "phone-app",
-            itens: ["Android Studio", "Xcode", "Google Play Console", "App Store Connect", "Manutenção de apps em produção"]
-        }
-    ],
-
-    softSkills: [
-        "Organização",
-        "Atenção aos detalhes",
-        "Paciência",
-        "Proatividade",
-        "Trabalho em equipe",
-        "Aprendizado rápido"
-    ],
-
-    idiomas: [
-        { nome: "Português", nivel: "Nativo", pontos: 5 },
-        { nome: "Inglês", nivel: "Intermediário", pontos: 3 }
-    ],
-
+    // Experiência Profissional
     experiencias: [
         {
             cargo: "Desenvolvedor Mobile Júnior",
             empresa: "Guia de Motéis",
-            periodo: "2026 — Atual",
-            descricao: [
-                "Manutenção evolutiva de aplicações mobile em Flutter e Dart, com apps ativos na Google Play e na App Store.",
-                "Melhorias de interface, responsividade e usabilidade a partir de retornos de uso real dos usuários.",
-                "Versionamento e organização das alterações com Git e GitHub, em colaboração com o time.",
-                "Apoio nas rotinas de publicação, atualização e acompanhamento dos apps nas lojas."
-            ],
-            tech: ["Flutter", "Dart", "Git", "Android Studio", "Xcode", "Play Console", "App Store Connect"]
+            periodo: "01/02/2026 —27/06/2026",
+            local: "Remoto",
+            descricoes: [
+                "Desenvolvimento e manutenção evolutiva de aplicações mobile com Flutter e Dart.",
+                "Implementação de melhorias em interface, responsividade, usabilidade e experiência do usuário.",
+                "Uso de Git e GitHub para versionamento, organização de alterações e colaboração com o time.",
+                "Apoio em rotinas de publicação e manutenção de apps na Google Play e na App Store."
+            ]
         }
-
-        /* ------------------------------------------------------------------
-           ADICIONE AQUI sua experiência de atendimento e/ou administrativa.
-           Copie o bloco abaixo, descomente e preencha com os dados reais —
-           é o que mais pesa nas vagas de atendimento e administrativo.
-
-        ,{
-            cargo: "Atendimento ao Cliente",
-            empresa: "Nome do local",
-            periodo: "2024 — 2025",
-            descricao: [
-                "Atendimento a clientes por WhatsApp, telefone e presencialmente.",
-                "Organização de planilhas de controle, cadastros e notas fiscais.",
-                "Registro e acompanhamento das demandas até a resolução."
-            ],
-            tech: ["Excel", "WhatsApp", "Pacote Office"]
-        }
-        ------------------------------------------------------------------ */
     ],
 
+    // Competências organizadas em 4 grupos
+    competencias: {
+        "Tecnologia e Desenvolvimento": [
+            "Flutter & Dart (mobile)",
+            "JavaScript / Node.js",
+            "C# (.NET básico)",
+            "HTML5, CSS3, SQL",
+            "Git & GitHub",
+            "Firebase / Supabase",
+            "Android Studio, Xcode, VS Code"
+        ],
+        "Atendimento e Comunicação": [
+            "Atendimento ao cliente",
+            "Comunicação clara e empática",
+            "Trabalho em equipe e colaboração",
+            "Resolução de problemas",
+            "Escrita técnica e documentação"
+        ],
+        "Administrativo e Produtividade": [
+            "Organização de processos e rotinas",
+            "Gestão de tarefas e prioridades",
+            "Ferramentas Google (Docs, Sheets, Drive)",
+            "Pacote Office (Word, Excel, PowerPoint)",
+            "Controle de versões e changelogs"
+        ],
+        "Design e Ferramentas Digitais": [
+            "Figma (prototipação, UI/UX básico)",
+            "Criação de interfaces responsivas",
+            "Edição de vídeo (básico)",
+            "Google Play Console, App Store Connect",
+            "Noções de cibersegurança e LGPD"
+        ]
+    },
+
+    // Projetos Relevantes
     projetos: [
         {
-            titulo: "Plataforma de Pedidos White-label",
-            contexto: "Projeto de Conclusão de Curso · ETEC",
+            nome: "Plataforma de Pedidos White-label — TCC",
             periodo: "2026",
-            descricao: [
-                "Plataforma de pedidos em C# inspirada no modelo do iFood, com proposta white-label para personalização por estabelecimento.",
-                "Atuação no planejamento, modelagem da solução, desenvolvimento e apresentação técnica para banca."
+            descricoes: [
+                "Desenvolvimento e apresentação de uma plataforma de pedidos em C#, inspirada no modelo do iFood.",
+                "Criação de proposta white-label para personalização por empresas e estabelecimentos.",
+                "Uso de Figma para prototipação, planejamento visual e estruturação da experiência do usuário."
             ],
-            tech: ["C#", "Figma", "Prototipação", "Modelagem de dados"]
+            link: null
         },
         {
-            titulo: "Blog com Inteligência Artificial",
-            contexto: "Projeto independente",
-            descricao: [
-                "Site de publicação de posts com geração automática de conteúdo apoiada por IA.",
-                "Prática com automação, integração de APIs e organização de conteúdo digital."
+            nome: "Blog com Inteligência Artificial",
+            periodo: "2025",
+            descricoes: [
+                "Desenvolvimento de site para publicação de blogs com geração automática de conteúdo via IA.",
+                "Implementação de recursos de inteligência artificial para apoio à criação de posts e automação de conteúdo.",
+                "Experiência prática com automação de conteúdo, aplicações web e integração com serviços de IA."
             ],
-            tech: ["JavaScript", "Web", "Automação", "Integração com IA"]
-        },
-        {
-            titulo: "Edição de vídeos — canal Derivandoideias",
-            contexto: "Projeto independente",
-            descricao: [
-                "Edição de vídeos para canal no YouTube, com atenção a ritmo, clareza e senso estético.",
-                "Rotina de organização de arquivos, prazos e materiais audiovisuais."
-            ],
-            tech: ["Edição de vídeo", "Produção digital"]
+            link: null
         }
     ],
 
-    educacao: [
+    // Formação Acadêmica
+    formacao: [
         {
-            curso: "Técnico em Programação para Internet",
+            curso: "Sistemas de Programação",
+            instituicao: "FGP",
+            periodo: "Em andamento",
+            status: "Cursando"
+        },
+        {
+            curso: "Técnico em Programação para Internet integrado ao Ensino Médio",
             instituicao: "ETEC Comendador João Rays",
             periodo: "2023 — 2026",
-            descricao: "Formação técnica integrada ao Ensino Médio: desenvolvimento web, lógica de programação, interfaces, banco de dados, cibersegurança, prototipação e apresentação de projetos."
+            status: "Cursando"
         }
-    ]
+    ],
+
+    // Idiomas
+    idiomas: [
+        { idioma: "Português", nivel: "Nativo" },
+        { idioma: "Inglês", nivel: "Intermediário" }
+    ],
+
+    // Características Pessoais
+    caracteristicas: [
+        "Organizado e metódico",
+        "Aprendizado contínuo",
+        "Comunicação assertiva",
+        "Foco em entrega e qualidade",
+        "Adaptabilidade a novos contextos"
+    ],
+
+    // Metadados
+    nomeArquivoPdf: "curriculo-vitor-ortiz.pdf",
+    tituloPagina: "Currículo - Vitor Ortiz de Camargo",
+    descricaoSeo: "Currículo profissional de Vitor Ortiz de Camargo — Tecnologia, Atendimento e Organização de Processos. Experiência em Flutter/Dart, JavaScript, Node.js, C#, Git, Figma, Supabase. Projetos em mobile, web e automação."
 };
 
-/* ==========================================================================
-   HELPERS
-   ========================================================================== */
-const escapar = (valor) => String(valor)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+// ============================================
+// RENDERIZAÇÃO DINÂMICA
+// ============================================
+let versoAtual = 'visual'; // 'visual' ou 'ats'
 
-const definirTexto = (id, texto) => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = texto;
-};
+function renderCurriculo() {
+    const container = document.querySelector('.resume-container');
+    if (!container) return;
 
-const definirHtml = (id, html) => {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = html;
-};
+    const d = dadosCurriculo;
 
-const icone = (nome) => `<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-${nome}"></use></svg>`;
+    // Atualiza título da página e meta SEO
+    document.title = d.tituloPagina;
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.name = 'description';
+        document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = d.descricaoSeo;
 
-const chips = (itens) => itens.map(item => `<li class="chip">${escapar(item)}</li>`).join('');
+    // HTML do currículo
+    container.innerHTML = `
+        <header class="resume-header">
+            <h1>${escapeHtml(d.nome)}</h1>
+            <p class="role">${escapeHtml(d.tituloProfissional)}</p>
+            <div class="contact-line">
+                <a href="tel:${escapeHtml(d.telefone)}">${escapeHtml(d.telefone)}</a>
+                <span>${escapeHtml(d.localizacao)}</span>
+                <a href="mailto:${escapeHtml(d.email)}">${escapeHtml(d.email)}</a>
+            </div>
+            <div class="contact-line">
+                <a href="${escapeHtml(d.github)}" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="${escapeHtml(d.linkedin)}" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+        </header>
 
-const topicos = (itens) => itens.map(item => `<li>${escapar(item)}</li>`).join('');
+        <div class="resume-grid">
+            <!-- Sidebar (apenas versão visual) -->
+            ${versoAtual === 'visual' ? `
+            <aside class="resume-sidebar" aria-label="Informações complementares">
+                <div class="sidebar-photo" aria-hidden="true">
+                    <img src="photo.png" alt="" loading="lazy">
+                </div>
+                <section class="sidebar-section">
+                    <h2>Idiomas</h2>
+                    <ul class="sidebar-list">
+                        ${d.idiomas.map(i => `<li><strong>${escapeHtml(i.idioma)}:</strong> ${escapeHtml(i.nivel)}</li>`).join('')}
+                    </ul>
+                </section>
 
-/* ==========================================================================
-   RENDERIZAÇÃO
-   ========================================================================== */
-function renderizarIdentidade() {
-    definirTexto('nome', dadosCurriculo.nome);
-    definirTexto('cargo', dadosCurriculo.cargo);
-    definirTexto('tagline', dadosCurriculo.tagline);
-    definirTexto('resumo-text', dadosCurriculo.resumo);
-    document.title = `${dadosCurriculo.nome} — ${dadosCurriculo.cargo}`;
-}
+                <section class="sidebar-section">
+                    <h2>Características</h2>
+                    <ul class="sidebar-list">
+                        ${d.caracteristicas.map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+                    </ul>
+                </section>
 
-function renderizarContato() {
-    definirHtml('contato-list', dadosCurriculo.contato.map(item => {
-        const externo = item.href && item.href.startsWith('http');
-        const conteudo = item.href
-            ? `<a href="${escapar(item.href)}"${externo ? ' target="_blank" rel="noreferrer"' : ''}>${escapar(item.texto)}</a>`
-            : `<span>${escapar(item.texto)}</span>`;
-        return `<li>${icone(item.icone)}<span class="contato-valor">${conteudo}</span></li>`;
-    }).join(''));
-}
+                <section class="sidebar-section">
+                    <h2>Contato</h2>
+                    <ul class="sidebar-list">
+                        <li><a href="tel:${escapeHtml(d.telefone)}">${escapeHtml(d.telefone)}</a></li>
+                        <li><a href="mailto:${escapeHtml(d.email)}">${escapeHtml(d.email)}</a></li>
+                        <li>${escapeHtml(d.localizacao)}</li>
+                        <li><a href="${escapeHtml(d.github)}" target="_blank" rel="noreferrer">GitHub</a></li>
+                        <li><a href="${escapeHtml(d.linkedin)}" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                    </ul>
+                </section>
+            </aside>
+            ` : ''}
 
-function renderizarCompetencias() {
-    definirHtml('competencias-container', dadosCurriculo.competencias.map(grupo => `
-        <div class="competencia">
-            <h3>${icone(grupo.icone)}${escapar(grupo.grupo)}</h3>
-            <ul class="chips">${chips(grupo.itens)}</ul>
+            <!-- Main Content -->
+            <main class="resume-main" aria-label="Conteúdo principal do currículo">
+                ${versoAtual === 'ats' ? renderAtsSidebarContent(d) : ''}
+
+                <!-- 1. Resumo Profissional -->
+                <section>
+                    <h2>Resumo Profissional</h2>
+                    <p>${escapeHtml(d.resumo)}</p>
+                </section>
+
+                <!-- 2. Experiência Profissional -->
+                <section>
+                    <h2>Experiência Profissional</h2>
+                    ${d.experiencias.map(exp => `
+                        <article class="entry">
+                            <div class="entry-header">
+                                <h3>${escapeHtml(exp.cargo)}</h3>
+                                <span>${escapeHtml(exp.periodo)}</span>
+                            </div>
+                            <p class="entry-company">${escapeHtml(exp.empresa)}${exp.local ? ` · ${escapeHtml(exp.local)}` : ''}</p>
+                            <ul>
+                                ${exp.descricoes.map(desc => `<li>${escapeHtml(desc)}</li>`).join('')}
+                            </ul>
+                        </article>
+                    `).join('')}
+                </section>
+
+                <!-- 3. Competências -->
+                <section>
+                    <h2>Competências</h2>
+                    <div class="competencias-grid">
+                        ${Object.entries(d.competencias).map(([grupo, itens]) => `
+                            <div class="competencia-grupo">
+                                <h3>${escapeHtml(grupo)}</h3>
+                                <ul>
+                                    ${itens.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+                                </ul>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+
+                <!-- 4. Projetos Relevantes -->
+                <section>
+                    <h2>Projetos Relevantes</h2>
+                    ${d.projetos.map(proj => `
+                        <article class="entry">
+                            <div class="entry-header">
+                                <h3>${escapeHtml(proj.nome)}</h3>
+                                <span>${escapeHtml(proj.periodo)}</span>
+                            </div>
+                            <ul>
+                                ${proj.descricoes.map(desc => `<li>${escapeHtml(desc)}</li>`).join('')}
+                            </ul>
+                            ${proj.link ? `<p class="project-link"><a href="${escapeHtml(proj.link)}" target="_blank" rel="noreferrer">Ver repositório/projeto →</a></p>` : ''}
+                        </article>
+                    `).join('')}
+                </section>
+
+                <!-- 5. Formação Acadêmica -->
+                <section>
+                    <h2>Formação Acadêmica</h2>
+                    ${d.formacao.map(f => `
+                        <article class="entry">
+                            <div class="entry-header">
+                                <h3>${escapeHtml(f.curso)}</h3>
+                                <span>${escapeHtml(f.periodo)}</span>
+                            </div>
+                            <p class="entry-company">${escapeHtml(f.instituicao)}</p>
+                            <p class="entry-status">${escapeHtml(f.status)}</p>
+                        </article>
+                    `).join('')}
+                </section>
+            </main>
         </div>
-    `).join(''));
+
+        <!-- Botão de alternância de versão -->
+        <button class="btn-version-toggle" id="btn-version-toggle" type="button" aria-label="${versoAtual === 'visual' ? 'Alternar para versão ATS' : 'Alternar para versão visual'}">
+            ${versoAtual === 'visual' ? 'Versão ATS' : 'Versão Visual'}
+        </button>
+    `;
+
+    // Re-attach event listeners
+    attachEventListeners();
 }
 
-function renderizarPerfilLateral() {
-    definirHtml('soft-skills-list', chips(dadosCurriculo.softSkills));
+function renderAtsSidebarContent(d) {
+    // Na versão ATS, inclui as infos do sidebar inline no main
+    return `
+        <section class="ats-sidebar-content" aria-label="Informações complementares">
+            <h2>Idiomas</h2>
+            <ul class="ats-inline-list">
+                ${d.idiomas.map(i => `<li><strong>${escapeHtml(i.idioma)}:</strong> ${escapeHtml(i.nivel)}</li>`).join('')}
+            </ul>
 
-    definirHtml('idiomas-list', dadosCurriculo.idiomas.map(idioma => `
-        <li class="idioma">
-            <div class="idioma-info">
-                <span class="idioma-nome">${escapar(idioma.nome)}</span>
-                <span class="idioma-nivel">${escapar(idioma.nivel)}</span>
-            </div>
-            <span class="medidor" role="img" aria-label="Nível ${escapar(idioma.nivel)}">
-                ${Array.from({ length: 5 }, (_, i) => `<i class="${i < idioma.pontos ? 'on' : ''}"></i>`).join('')}
-            </span>
-        </li>
-    `).join(''));
+            <h2>Características</h2>
+            <ul class="ats-inline-list">
+                ${d.caracteristicas.map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+            </ul>
+
+            <h2>Contato</h2>
+            <ul class="ats-inline-list">
+                <li><a href="tel:${escapeHtml(d.telefone)}">${escapeHtml(d.telefone)}</a></li>
+                <li><a href="mailto:${escapeHtml(d.email)}">${escapeHtml(d.email)}</a></li>
+                <li>${escapeHtml(d.localizacao)}</li>
+                <li><a href="${escapeHtml(d.github)}" target="_blank" rel="noreferrer">GitHub</a></li>
+                <li><a href="${escapeHtml(d.linkedin)}" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            </ul>
+        </section>
+    `;
 }
 
-function renderizarItens(containerId, itens) {
-    definirHtml(containerId, itens.map(item => `
-        <article class="item">
-            <div class="item-head">
-                <h3 class="item-titulo">${escapar(item.cargo || item.titulo)}</h3>
-                ${item.periodo ? `<span class="item-periodo">${escapar(item.periodo)}</span>` : ''}
-            </div>
-            <p class="item-sub">${escapar(item.empresa || item.contexto)}</p>
-            <ul class="item-topicos">${topicos(item.descricao)}</ul>
-            ${item.tech ? `<ul class="chips chips-tech">${chips(item.tech)}</ul>` : ''}
-        </article>
-    `).join(''));
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
-function renderizarEducacao() {
-    definirHtml('educacao-container', dadosCurriculo.educacao.map(edu => `
-        <article class="item">
-            <div class="item-head">
-                <h3 class="item-titulo">${escapar(edu.curso)}</h3>
-                <span class="item-periodo">${escapar(edu.periodo)}</span>
-            </div>
-            <p class="item-sub">${escapar(edu.instituicao)}</p>
-            <p class="item-texto">${escapar(edu.descricao)}</p>
-        </article>
-    `).join(''));
+function attachEventListeners() {
+    // Botão PDF (impressão nativa)
+    document.getElementById('btn-pdf')?.addEventListener('click', salvarPdf);
+
+    // Botão toggle versão
+    document.getElementById('btn-version-toggle')?.addEventListener('click', alternarVersao);
 }
 
-function renderizarCurriculo() {
-    renderizarIdentidade();
-    renderizarContato();
-    renderizarCompetencias();
-    renderizarPerfilLateral();
-    renderizarItens('experiencias-container', dadosCurriculo.experiencias);
-    renderizarItens('projetos-container', dadosCurriculo.projetos);
-    renderizarEducacao();
+function alternarVersao() {
+    versoAtual = versoAtual === 'visual' ? 'ats' : 'visual';
+    document.body.classList.toggle('ats-version', versoAtual === 'ats');
+    renderCurriculo();
 }
 
-/* ==========================================================================
-   TEMA (claro / escuro)
-   ========================================================================== */
-const CHAVE_TEMA = 'curriculo:tema';
+// ============================================
+// PDF GENERATION — Impressão Nativa
+// ============================================
+function salvarPdf() {
+    const botaoPdf = document.getElementById('btn-pdf');
+    if (!botaoPdf) return;
 
-function lerTemaSalvo() {
-    try {
-        return localStorage.getItem(CHAVE_TEMA);
-    } catch {
-        return null;
+    const textoOriginal = botaoPdf.innerText;
+    botaoPdf.innerText = 'Preparando impressão...';
+    botaoPdf.classList.add('loading');
+    botaoPdf.disabled = true;
+
+    // Pequeno delay para UI atualizar
+    setTimeout(() => {
+        window.print();
+        botaoPdf.innerText = textoOriginal;
+        botaoPdf.classList.remove('loading');
+        botaoPdf.disabled = false;
+    }, 100);
+}
+
+window.addEventListener('afterprint', () => {
+    const botaoPdf = document.getElementById('btn-pdf');
+    if (botaoPdf) {
+        botaoPdf.innerText = 'Salvar PDF';
+        botaoPdf.classList.remove('loading');
+        botaoPdf.disabled = false;
     }
-}
+});
 
-function salvarTema(tema) {
-    try {
-        localStorage.setItem(CHAVE_TEMA, tema);
-    } catch {
-        /* navegação privada ou storage bloqueado: segue sem persistir */
-    }
-}
-
-function aplicarTema(tema) {
-    document.documentElement.dataset.theme = tema;
-    const botao = document.getElementById('btn-tema');
-    if (botao) {
-        botao.setAttribute('aria-pressed', String(tema === 'dark'));
-        botao.setAttribute('title', tema === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro');
-    }
-}
-
-const temaAtual = () => document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
-
-function iniciarTema() {
-    const salvo = lerTemaSalvo();
-    const preferencia = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    aplicarTema(salvo || preferencia);
-}
-
-/* ==========================================================================
-   IMPRESSÃO / PDF
-   O PDF sai pelo próprio navegador: texto vetorial, selecionável e
-   legível por sistemas de triagem de currículo (ATS).
-   ========================================================================== */
-function imprimir() {
-    window.print();
-}
-
-/* ==========================================================================
-   INICIALIZAÇÃO
-   ========================================================================== */
-iniciarTema();
-
-window.addEventListener('DOMContentLoaded', () => {
-    renderizarCurriculo();
-
-    document.getElementById('btn-pdf')?.addEventListener('click', imprimir);
-    document.getElementById('btn-tema')?.addEventListener('click', () => {
-        const proximo = temaAtual() === 'dark' ? 'light' : 'dark';
-        aplicarTema(proximo);
-        salvarTema(proximo);
-    });
+// ============================================
+// INICIALIZAÇÃO
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    renderCurriculo();
 });

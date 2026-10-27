@@ -15,7 +15,7 @@ Apresentar o perfil profissional de forma clara, organizada e versátil para can
 - **HTML5** — Estrutura semântica e acessível
 - **CSS3** — Layout responsivo (Grid/Flexbox), variáveis CSS, media queries, print styles
 - **JavaScript (Vanilla)** — Renderização dinâmica a partir de fonte única de dados (`dadosCurriculo`)
-- **html2canvas + jsPDF** — Geração de PDF via CDN (sem build, sem dependências locais)
+- **Impressão Nativa do Navegador** — Geração de PDF via `window.print()` (texto selecionável, sem dependências externas)
 
 ---
 
@@ -53,11 +53,12 @@ xdg-open index.html
 
 ### Opção 1: Botão "Salvar PDF" (Recomendado)
 - Clique no botão **"Salvar PDF"** no canto inferior direito
-- O script usa `html2canvas` + `jsPDF` para gerar um PDF fiel ao layout visual
-- Arquivo salvo como `curriculo-vitor-ortiz.pdf`
+- Abre a caixa de impressão nativa do navegador (`window.print()`)
+- Selecione **"Salvar como PDF"** como destino
+- Arquivo salvo com texto **selecionável e pesquisável**
 
-### Opção 2: Impressão do Navegador (Fallback)
-- Se as bibliotecas CDN falharem, o botão abre a caixa de impressão nativa (`Ctrl+P` / `Cmd+P`)
+### Opção 2: Impressão Direta do Navegador
+- Use `Ctrl+P` / `Cmd+P` em qualquer versão
 - Selecione **"Salvar como PDF"** como destino
 - Configure margens: **Nenhuma** ou **Mínimas** para melhor aproveitamento
 
@@ -66,7 +67,7 @@ xdg-open index.html
 2. Use `Ctrl+P` / `Cmd+P` e salve como PDF
 3. Resultado: coluna única, texto selecionável, ideal para ATS
 
-> **Nota:** O PDF gerado pelo botão "Salvar PDF" é uma imagem rasterizada (canvas). Para PDF com texto selecionável, use a impressão nativa do navegador na versão desejada.
+> **Nota:** O PDF é gerado exclusivamente pela impressão nativa do navegador — texto 100% selecionável, sem rasterização.
 
 ---
 
@@ -119,7 +120,7 @@ Meu-Curriculo/
 ├── index.html          # HTML base (container vazio, carrega JS/CSS)
 ├── style.css           # Estilos: visual, ATS, print, responsivo
 ├── script.js           # Dados + renderização + PDF + toggle versão
-├── photo.jpg           # Foto do perfil (não versionada se sensível)
+├── photo.png           # Foto do perfil (não versionada se sensível)
 ├── curriculo-vitor-ortiz.pdf  # PDF gerado (opcional, não versionar)
 └── README.md           # Este arquivo
 ```
@@ -148,10 +149,10 @@ Meu-Curriculo/
 
 ## Limitações Conhecidas
 
-1. **PDF via html2canvas** gera imagem rasterizada (texto não selecionável). Para PDF com texto nativo, use a impressão do navegador.
-2. **Foto de perfil** (`photo.jpg`) não está incluída no repositório por privacidade — adicione localmente se desejar.
-3. **Bibliotecas CDN** (html2canvas, jsPDF) requerem internet para geração de PDF via botão. Offline usa fallback nativo.
-4. **Regeneração do PDF estático** (`curriculo-vitor-ortiz.pdf`) não é automática — gere manualmente e substitua se necessário.
+1. **PDF via impressão nativa** — requer interação do usuário (não é automático em background).
+2. **Foto de perfil** (`photo.png`) não está incluída no repositório por privacidade — adicione localmente se desejar.
+3. **Funciona 100% offline** — sem CDNs externas, sem dependências de build.
+4. **Regeneração do PDF estático** (`curriculo-vitor-ortiz.pdf`) não é automática — gere manualmente via "Salvar PDF" e substitua se necessário.
 
 ---
 
